@@ -89,7 +89,24 @@ export default function CustomContextMenu(props) {
       })
     setShow(false)
   }
+ /**
+  * 切换主题
+  */
+  function handeChangeTheme() {
+    const randomTheme = THEMES[Math.floor(Math.random() * THEMES.length)] // 从THEMES数组中 随机取一个主题
+    const query = router.query
+    query.theme = randomTheme
+    router.push({ pathname: router.pathname, query })
+  }
 
+  function handleChangeDarkMode() {
+    const newStatus = !isDarkMode
+    saveDarkModeToCookies(newStatus)
+    updateDarkMode(newStatus)
+    const htmlElement = document.getElementsByTagName('html')[0]
+    htmlElement.classList?.remove(newStatus ? 'light' : 'dark')
+    htmlElement.classList?.add(newStatus ? 'dark' : 'light')
+  }
  
 
   return (
@@ -144,6 +161,10 @@ export default function CustomContextMenu(props) {
                     <div onClick={handleChangeDarkMode} title={isDarkMode ? locale.MENU.LIGHT_MODE : locale.MENU.DARK_MODE} className='w-full px-2 h-10 flex justify-start items-center flex-nowrap cursor-pointer hover:bg-blue-600 hover:text-white rounded-lg duration-200 transition-all'>
                         {isDarkMode ? <i className="fa-regular fa-sun mr-2" /> : <i className="fa-regular fa-moon mr-2" />}
                         <div className='whitespace-nowrap'> {isDarkMode ? locale.MENU.LIGHT_MODE : locale.MENU.DARK_MODE}</div>
+                    </div>
+                    <div onClick={handeChangeTheme} title={locale.MENU.THEME_SWITCH} className='w-full px-2 h-10 flex justify-start items-center flex-nowrap cursor-pointer hover:bg-blue-600 hover:text-white rounded-lg duration-200 transition-all'>
+                        <i className="fa-solid fa-palette mr-2" />
+                        <div className='whitespace-nowrap'>{locale.MENU.THEME_SWITCH}</div>
                     </div>
                    
                 </div>
