@@ -5,8 +5,9 @@ const CONFIG = {
 
   // 首页顶部通知条滚动内容，如不需要可以留空 []
   NOTICE_BAR: [
-    { title: '欢迎来到我的博客', url: 'https://blog.xiaoayu.ren' },
-    { title: '我是小团子，也是奶昔', url: 'https://blog.xiaoayu.ren' }
+    { title: '欢迎来到我的小站', url: 'https://blog.xiaoayu.ren' },
+    { title: '我是奶昔，励志成为一名产品经理', url: 'https://blog.xiaoayu.ren' },
+    { title: '喜欢做具有挑战性的事情', url: 'https://blog.xiaoayu.ren' }
   ],
 
   // 英雄区(首页顶部大卡)
@@ -30,13 +31,12 @@ const CONFIG = {
   INFOCARD_GREETINGS: [
     '你好！我是',
     '🔍 分享与热心帮助',
-    '🤝 专修交互与设计',
+    '🤝 爱好数分与商业',
     '🏃 脚踏实地行动派',
-    '🏠 智能家居小能手',
-    '🤖️ 数码科技爱好者',
+    '🏠 喜欢旅游与美食',
     '🧱 团队小组发动机'
   ],
-  INFO_CARD_URL: 'https://github.com/tangly1024/NotionNext', // 个人资料底部按钮链接
+  INFO_CARD_URL: 'https://github.com/yynaixi', // 个人资料底部按钮链接
 
   // 用户技能图标
   GROUP_ICONS: [
@@ -99,10 +99,10 @@ const CONFIG = {
   ],
 
   SOCIAL_CARD: true, // 是否显示右侧，点击加入社群按钮
-  SOCIAL_CARD_TITLE_1: '交流频道',
-  SOCIAL_CARD_TITLE_2: '加入我们的社群讨论分享',
-  SOCIAL_CARD_TITLE_3: '点击加入社群',
-  SOCIAL_CARD_URL: 'https://docs.tangly1024.com/article/how-to-question',
+  SOCIAL_CARD_TITLE_1: '与我交流',
+  SOCIAL_CARD_TITLE_2: '发送邮件与我交流',
+  SOCIAL_CARD_TITLE_3: '点击发送邮件',
+  SOCIAL_CARD_URL: 'mailto:2102008790@qq.com',
 
   // *****  以下配置无效，只是预留开发 ****
   // 菜单配置
